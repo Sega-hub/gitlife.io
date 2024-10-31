@@ -2533,12 +2533,14 @@ a {
     height: 198.3px;
     top: -77px;
     left: -8px;
+    opacity: 1;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom {
     width: 226.35px;
     height: 159.51px;
     left: 235px;
     top: 7px;
+    opacity: 1;
   }
   .container .main .team .team__container::after {
     content: "";
