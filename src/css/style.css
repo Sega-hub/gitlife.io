@@ -490,7 +490,7 @@ a {
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
   width: 100%;
   mix-blend-mode: screen;
-  filter: blur(40px);
+  filter: blur(25px);
   z-index: 8;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__circle {
@@ -509,7 +509,7 @@ a {
   background-color: blue;
   transition: all 1s ease;
   animation: morphing 4s infinite reverse;
-  filter: blur(28px);
+  filter: blur(25px);
   z-index: 6;
 }
 .container .main .advantages {
@@ -594,14 +594,12 @@ a {
   flex-direction: column;
   background-color: #060606;
   width: 100%;
-  height: 600px;
-  max-height: 600px;
   border-radius: 20px;
-  padding-bottom: 1px;
   border: 1px solid rgb(73, 73, 73);
+  background-size: 1121px 600px;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code.show {
-  background-image: url("../../public/images/test1.png");
+  background-image: url("../../public/images/hostingBack.png");
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription {
   padding: 80px 0 0 95px;
@@ -930,8 +928,8 @@ a {
 }
 .container .main .team .team__container .team__discription .team__discription__img .teamBottom {
   position: relative;
-  width: 262px;
-  height: 185px;
+  width: 294px;
+  height: 230px;
   left: 282px;
   top: -42px;
   z-index: 14;
@@ -940,6 +938,8 @@ a {
 }
 .container .main .team .team__container .team__discription .team__discription__img .teamBottom.enter {
   opacity: 1;
+  height: 185px;
+  width: 262px;
 }
 .container .main .team .team__container::after {
   content: "";
@@ -1120,6 +1120,7 @@ a {
   border-radius: 20px;
   border: 1px solid rgb(73, 73, 73);
   background-color: #060606;
+  background-size: 1120px 653px;
 }
 .container .main .methodology .methodology__container .methodology__connection.show {
   background-image: url("../../public/images/methodologyBack.png");
@@ -1163,6 +1164,9 @@ a {
   opacity: 0;
   z-index: 11;
   transition: all 1s ease 0.5s;
+  width: 430px;
+  height: 405px;
+  background-size: 430px 405px;
 }
 .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big .methodologyBottom.show {
   opacity: 1;
@@ -1171,6 +1175,7 @@ a {
   position: relative;
   width: 294px;
   height: 230px;
+  background-size: 294px 230px;
   top: -212px;
   left: 268px;
   opacity: 0;
@@ -1184,14 +1189,16 @@ a {
   content: "";
   position: relative;
   background-image: url("../../public/images/methodologyBranch.png");
-  width: 0px;
+  width: 151px;
   height: 124px;
   top: -135px;
   left: 292px;
-  transition: all 1s ease 1.5s;
+  transition: all 3s ease 1.5s;
+  background-size: 151px 124px;
+  opacity: 0;
 }
 .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big.show::before {
-  width: 151px;
+  opacity: 1;
 }
 .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__img__mini {
   display: none;

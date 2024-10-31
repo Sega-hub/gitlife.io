@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const offsetX = (itemRect.left + itemRect.width / 2) - (circleRect.left + circleRect.width / 2);
                 const offsetY = (itemRect.top + itemRect.height / 2) - (circleRect.top + circleRect.height / 2);
         
-                ball.style.transform = `translate(${offsetX * 0.3}px, ${offsetY * 0.3}px)`;
+                ball.style.transform = `translate(${offsetX * 0.34}px, ${offsetY * 0.34}px)`;
             });
         
             item.addEventListener('mouseout', () => {
