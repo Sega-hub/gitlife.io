@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     if (innerWidth > 1000) {
-        console.log(`rules working device width ${innerWidth}`)
-        const cards = document.querySelectorAll(".card"); 
-        const effect = document.querySelector(".effect"); 
+        console.log(`rules working device width ${innerWidth}`)      
         
-        const lines = document.querySelectorAll(".anim");
-
-        const moves = document.querySelectorAll("#move");
-
-        const hosting = document.querySelectorAll("#layer");
+        const lines = document.querySelectorAll(".anim");       
+        const cards = document.querySelectorAll(".card"); 
+        const effect = document.querySelector(".effect");
         
         document.querySelectorAll('.openspace__categories-item').forEach(item => {
             item.addEventListener('mouseover', (event) => {
@@ -83,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     card.removeChild(effect);
                 }
             });
-        });
-        
+        });         
+
         if (lines.length > 0) {
             window.addEventListener("scroll", animOnScroll);
             function animOnScroll() {
@@ -109,57 +105,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 };
             }
-        }   
-
-        if (moves.length > 0) {
-            window.addEventListener("scroll", scrollCard);
-            function scrollCard() {
-                for (let i = 0; i < moves.length; i++) {
-                    const moveAnim = moves[i];
-                    const moveHeight = moveAnim.offsetHeight;
-                    const moveAnimOffset = offset(moveAnim).top;
-                    const moveStart = 1.2;
-        
-                    let moveStartPoint = window.innerHeight - moveHeight / moveStart;
-        
-                    if (moveHeight > window.innerHeight) {
-                        moveStartPoint = window.innerHeight - window.innerHeight / moveStart;
-                    }
-        
-                    if ((pageYOffset > moveAnimOffset - moveStartPoint) && pageYOffset < (moveAnimOffset + moveHeight)) {               
-                        moveAnim.classList.add("enter");
-                    }
-                };
-            }
-        }
-
-        if (hosting.length > 0) {           
-            window.addEventListener("scroll", layerAppearance);
-            function layerAppearance() {
-                for (let i = 0; i < hosting.length; i++) {
-                    const hostAnim = hosting[i];
-                    const hostHeight = hostAnim.offsetHeight;
-                    const hostAnimOffset = offset(hostAnim).top;
-                    const hostStart = 2;
-        
-                    let hostStartPoint = window.innerHeight - hostHeight / hostStart;
-        
-                    if (hostHeight > window.innerHeight) {
-                        hostStartPoint = window.innerHeight - window.innerHeight / hostStart;
-                    }
-        
-                    if ((pageYOffset > hostAnimOffset - hostStartPoint) && pageYOffset < (hostAnimOffset + hostHeight)) {               
-                        hostAnim.classList.add("show");
-                    }
-                };
-            }
-        }
+        } 
 
     } else console.error(`rules doesn't working device width ${innerWidth}.
         you need more than 999`);
     
     const texts = document.querySelectorAll("#text");
-    
+    const hosting = document.querySelectorAll("#layer");
+    const moves = document.querySelectorAll("#move");
 
     if (texts.length > 0) {
         window.addEventListener("scroll", textAppearance);
@@ -178,6 +131,50 @@ document.addEventListener("DOMContentLoaded", () => {
     
                 if ((pageYOffset > textAnimOffset - textStartPoint) && pageYOffset < (textAnimOffset + textHeight)) {               
                     textAnim.classList.add("appearance");
+                }
+            };
+        }
+    }
+     
+    if (moves.length > 0) {
+        window.addEventListener("scroll", scrollCard);
+        function scrollCard() {
+            for (let i = 0; i < moves.length; i++) {
+                const moveAnim = moves[i];
+                const moveHeight = moveAnim.offsetHeight;
+                const moveAnimOffset = offset(moveAnim).top;
+                const moveStart = 1.2;
+    
+                let moveStartPoint = window.innerHeight - moveHeight / moveStart;
+    
+                if (moveHeight > window.innerHeight) {
+                    moveStartPoint = window.innerHeight - window.innerHeight / moveStart;
+                }
+    
+                if ((pageYOffset > moveAnimOffset - moveStartPoint) && pageYOffset < (moveAnimOffset + moveHeight)) {               
+                    moveAnim.classList.add("enter");
+                }
+            };
+        }
+    }
+
+    if (hosting.length > 0) {           
+        window.addEventListener("scroll", layerAppearance);
+        function layerAppearance() {
+            for (let i = 0; i < hosting.length; i++) {
+                const hostAnim = hosting[i];
+                const hostHeight = hostAnim.offsetHeight;
+                const hostAnimOffset = offset(hostAnim).top;
+                const hostStart = 2;
+    
+                let hostStartPoint = window.innerHeight - hostHeight / hostStart;
+    
+                if (hostHeight > window.innerHeight) {
+                    hostStartPoint = window.innerHeight - window.innerHeight / hostStart;
+                }
+    
+                if ((pageYOffset > hostAnimOffset - hostStartPoint) && pageYOffset < (hostAnimOffset + hostHeight)) {               
+                    hostAnim.classList.add("show");
                 }
             };
         }

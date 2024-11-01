@@ -2457,6 +2457,8 @@ a {
     width: 100%;
     padding-top: 0;
     translate: 0;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img.enter {
     opacity: 1;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img img {
@@ -2494,6 +2496,8 @@ a {
     width: 100%;
     padding-top: 0;
     translate: 0;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img.enter {
     opacity: 1;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img img {
@@ -2627,13 +2631,17 @@ a {
     height: 198.3px;
     top: -77px;
     left: -8px;
+  }
+  .container .main .team .team__container .team__discription .team__discription__img .teamTop.enter {
     opacity: 1;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom {
-    width: 226.35px;
-    height: 159.51px;
+    width: 226.35px !important;
+    height: 159.51px !important;
     left: 235px;
     top: 7px;
+  }
+  .container .main .team .team__container .team__discription .team__discription__img .teamBottom.enter {
     opacity: 1;
   }
   .container .main .team .team__container::after {
@@ -2731,6 +2739,8 @@ a {
     justify-content: end;
     width: 100%;
     translate: 0;
+  }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img.enter {
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img img {
@@ -2774,6 +2784,9 @@ a {
     justify-content: end;
     width: 100%;
     translate: 0;
+    translate: 0;
+  }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img.enter {
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img img {
