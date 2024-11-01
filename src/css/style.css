@@ -37,6 +37,14 @@ a {
     border-radius: 60% 60% 60% 60%/60% 60% 60% 60%;
   }
 }
+@keyframes mainTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .effect {
   scale: 0;
   opacity: 1;
@@ -262,6 +270,9 @@ a {
   line-height: 46px;
   text-align: center;
   color: rgb(240, 246, 252);
+  opacity: 0;
+  animation: mainTitle 2s ease 0.5s;
+  animation-fill-mode: forwards;
 }
 .container .main .offer .offer__container .offer__discription {
   margin-top: 35px;
@@ -413,6 +424,11 @@ a {
   line-height: 40px;
   text-align: center;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .openspace .openspace__container .openspace__title.appearance {
+  opacity: 1;
 }
 .container .main .openspace .openspace__container .openspace__title span {
   color: rgb(68, 63, 219);
@@ -541,6 +557,11 @@ a {
   line-height: 40px;
   text-align: center;
   color: rgb(240, 246, 252);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .advantages .advantages-title.appearance {
+  opacity: 1;
 }
 .container .main .advantages .advantages-discription {
   margin-top: 25px;
@@ -576,6 +597,11 @@ a {
   line-height: 47.81px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .hosting .hosting__container .hosting__title.appearance {
+  opacity: 1;
 }
 .container .main .hosting .hosting__container .hosting__title span {
   color: rgb(68, 63, 219);
@@ -632,7 +658,7 @@ a {
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__big img {
   z-index: 2;
   opacity: 0;
-  transition: all 1s ease 1s;
+  transition: all 1s ease 0.5s;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__big img.show {
   opacity: 1;
@@ -641,14 +667,15 @@ a {
   content: "";
   position: relative;
   background-image: url("../../public/images/hostingBranch.svg");
-  width: 0px;
+  width: 284px;
   height: 140px;
   background-size: 284px 140px;
   top: 165px;
-  transition: all 1s ease 0.5s;
+  transition: all 2s ease 1s;
+  opacity: 0;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__big.show::before {
-  width: 284px;
+  opacity: 1;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images {
   display: flex;
@@ -827,6 +854,11 @@ a {
   line-height: 47.81px;
   text-align: left;
   color: rgb(68, 63, 219);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .team .team__container .team__title.appearance {
+  opacity: 1;
 }
 .container .main .team .team__container .team__slogan {
   padding-top: 20px;
@@ -837,6 +869,11 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.container .main .team .team__container .team__slogan.appearance {
+  opacity: 1;
 }
 .container .main .team .team__container .team__card {
   margin-top: 83px;
@@ -922,7 +959,7 @@ a {
   top: -139px;
   z-index: 15;
   opacity: 0;
-  transition: all 1s ease 1s;
+  transition: all 0.5s ease 2s;
   box-shadow: 0px 35px 17px 0px rgba(4, 4, 28, 0.79);
 }
 .container .main .team .team__container .team__discription .team__discription__img .teamTop.enter {
@@ -979,6 +1016,11 @@ a {
   line-height: 47.81px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .methodology .methodology__container .methodology__title.appearance {
+  opacity: 1;
 }
 .container .main .methodology .methodology__container .methodology__title span {
   color: rgb(68, 63, 219);
@@ -992,6 +1034,11 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.container .main .methodology .methodology__container .methodology__slogan.appearance {
+  opacity: 1;
 }
 .container .main .methodology .methodology__container .methodology__grid {
   padding-top: 108px;
@@ -1248,6 +1295,11 @@ a {
   line-height: 40px;
   text-align: center;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .possibilities .possibilities__container .possibilities__title.appearance {
+  opacity: 1;
 }
 .container .main .possibilities .possibilities__container .possibilities__title span {
   color: rgb(68, 63, 219);
@@ -1363,6 +1415,11 @@ a {
   line-height: 47.81px;
   text-align: left;
   color: rgb(68, 63, 219);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .cases .cases__container .cases__title.appearance {
+  opacity: 1;
 }
 .container .main .cases .cases__container .cases__slogan {
   margin-top: 20px;
@@ -1373,6 +1430,11 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.container .main .cases .cases__container .cases__slogan.appearance {
+  opacity: 1;
 }
 .container .main .cases .cases__container .cases__box {
   padding-top: 110px;

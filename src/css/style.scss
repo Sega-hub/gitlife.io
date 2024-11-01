@@ -174,6 +174,15 @@ $width: 80%;
     }
 }
 
+@keyframes mainTitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .effect {
     scale: 0;
     opacity: 1;
@@ -304,6 +313,9 @@ $width: 80%;
                     line-height: 46px;
                     text-align: center;
                     color: $COLOR_LIGHT_WHITE;
+                    opacity: 0;
+                    animation: mainTitle 2s ease 0.5s;
+                    animation-fill-mode: forwards;
                 }
                 .offer__discription {
                     margin-top: 35px;
@@ -389,6 +401,11 @@ $width: 80%;
                     line-height: 40px;
                     text-align: center;
                     color: $COLOR_WHITE; 
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                     span {
                         color: rgba(68, 63, 219, 1);
                     }                   
@@ -524,6 +541,11 @@ $width: 80%;
                 line-height: 40px;
                 text-align: center;
                 color: $COLOR_LIGHT_WHITE;
+                opacity: 0;
+                transition: all 1s ease 0s;
+                &.appearance {
+                    opacity: 1;
+                }
             }
             .advantages-discription {
                 margin-top: 25px;
@@ -558,6 +580,11 @@ $width: 80%;
                     line-height: 47.81px;
                     text-align: left;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                     span {
                         color: rgba(68, 63, 219, 1);
                     }                    
@@ -612,7 +639,7 @@ $width: 80%;
                             img {
                                 z-index: 2;
                                 opacity: 0;
-                                transition: all 1s ease 1s;
+                                transition: all 1s ease 0.5s;
                                 &.show {
                                     opacity: 1;
                                 }
@@ -621,15 +648,16 @@ $width: 80%;
                             &::before {
                                 content: "";
                                 position: relative;
-                                background-image: url("../../public/images/hostingBranch.svg");
-                                width: 0px;
+                                background-image: url("../../public/images/hostingBranch.svg");                               
+                                width: 284px;
                                 height: 140px;
                                 background-size: 284px 140px;
                                 top: 165px;  
-                                transition: all 1s ease 0.5s;                             
+                                transition: all 2s ease 1s;   
+                                opacity: 0;                          
                             }
                             &.show::before{
-                                width: 284px;
+                                opacity: 1;
                             }
                         }
                         .hosting__code__images {
@@ -754,6 +782,11 @@ $width: 80%;
                     line-height: 47.81px;
                     text-align: left;
                     color: rgba(68, 63, 219, 1);
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                 }
                 .team__slogan {                    
                     padding-top: 20px;
@@ -764,6 +797,11 @@ $width: 80%;
                     line-height: 23.4px;
                     text-align: left;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0.5s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                 }
                 .team__card {
                     margin-top: 83px;
@@ -847,7 +885,7 @@ $width: 80%;
                             top: -139px;
                             z-index: 15;
                             opacity: 0;
-                            transition: all 1s ease 1s;
+                            transition: all 0.5s ease 2s;
                             box-shadow: 0px 35px 17px 0px rgba(4, 4, 28, 0.79);
 
                             &.enter {
@@ -907,6 +945,11 @@ $width: 80%;
                     line-height: 47.81px;
                     text-align: left;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                     span {
                         color: rgba(68, 63, 219, 1);
                     }
@@ -920,6 +963,11 @@ $width: 80%;
                     line-height: 23.4px;
                     text-align: left;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0.5s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                 }
                 .methodology__grid {
                     padding-top: 108px;
@@ -1116,6 +1164,11 @@ $width: 80%;
                     line-height: 40px;
                     text-align: center;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }
                     span {
                         color: rgba(68, 63, 219, 1);
                     }
@@ -1166,7 +1219,12 @@ $width: 80%;
                     letter-spacing: 0.03em;
                     line-height: 47.81px;
                     text-align: left;
-                    color: rgba(68, 63, 219, 1);                    
+                    color: rgba(68, 63, 219, 1); 
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }                  
                 }
                 .cases__slogan {
                     margin-top: 20px;
@@ -1177,6 +1235,11 @@ $width: 80%;
                     line-height: 23.4px;
                     text-align: left;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0.5s;
+                    &.appearance {
+                        opacity: 1;
+                    }   
                 }
                 .cases__box {
                     padding-top: 110px;
@@ -1769,7 +1832,7 @@ $width: 80%;
                         line-height: 25px;
                         text-align: left;
                         color: $COLOR_LIGHT_WHITE;
-                        padding-top: 190px;
+                        padding-top: 190px;                       
                         br {
                             display: none;
                         }
