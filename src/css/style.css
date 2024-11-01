@@ -280,6 +280,9 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
+  animation: mainTitle 2s ease 1s;
+  animation-fill-mode: forwards;
 }
 .container .main .offer .offer__container .offer__discription .offer__info {
   font-family: "Hauora";
@@ -442,6 +445,11 @@ a {
   line-height: 20.8px;
   text-align: center;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.container .main .openspace .openspace__container .openspace__discription.appearance {
+  opacity: 1;
 }
 .container .main .openspace .openspace__container .openspace__discription span {
   color: rgb(112, 111, 146);
@@ -572,6 +580,11 @@ a {
   line-height: 20.8px;
   text-align: center;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .advantages .advantages-discription.appearance {
+  opacity: 1;
 }
 .container .main .advantages .advantages-discription span {
   color: rgb(112, 111, 146);
@@ -1756,6 +1769,11 @@ a {
   line-height: 40px;
   text-align: left;
   color: rgb(240, 246, 252);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .invitation .invitation__container .invitation__title.appearance {
+  opacity: 1;
 }
 .container .main .invitation .invitation__container .invitation__slogan {
   padding-top: 25px;
@@ -1766,6 +1784,11 @@ a {
   line-height: 20.8px;
   text-align: left;
   color: rgb(112, 111, 146);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.container .main .invitation .invitation__container .invitation__slogan.appearance {
+  opacity: 1;
 }
 .container .main .invitation .invitation__container .invitation__search {
   padding-top: 67px;
@@ -2223,6 +2246,15 @@ a {
     justify-content: space-between;
     gap: 35px;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .container .main .openspace .openspace__container .openspace__variation:nth-child(1) {
+    order: 2;
+  }
+  .container .main .openspace .openspace__container .openspace__variation:nth-child(2) {
+    order: 1;
+  }
+  .container .main .openspace .openspace__container .openspace__variation:nth-child(3) {
+    order: 3;
   }
   .container .main .openspace .openspace__container .openspace__variation br.mob {
     display: flex;

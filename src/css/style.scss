@@ -321,6 +321,9 @@ $width: 80%;
                     margin-top: 35px;
                     @include center();
                     flex-direction: column;
+                    opacity: 0;
+                    animation: mainTitle 2s ease 1s;
+                    animation-fill-mode: forwards;
                     .offer__info {
                         font-family: "Hauora";
                         font-size: $FONT_SIZE_16;
@@ -419,6 +422,11 @@ $width: 80%;
                     line-height: 20.8px;
                     text-align: center;
                     color: $COLOR_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0.5s;
+                    &.appearance {
+                        opacity: 1;
+                    }  
                     span {
                         color: $COLOR_GRAY;
                     }
@@ -556,6 +564,11 @@ $width: 80%;
                 line-height: 20.8px;
                 text-align: center;
                 color: $COLOR_WHITE;
+                opacity: 0;
+                transition: all 1s ease 0s;
+                &.appearance {
+                    opacity: 1;
+                }  
                 span {
                     color: $COLOR_GRAY;
                 }
@@ -1561,6 +1574,11 @@ $width: 80%;
                     line-height: 40px;
                     text-align: left;
                     color: $COLOR_LIGHT_WHITE;
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }  
                 }
                 .invitation__slogan {
                     padding-top: 25px;
@@ -1571,6 +1589,11 @@ $width: 80%;
                     line-height: 20.8px;
                     text-align: left;
                     color: $COLOR_GRAY;
+                    opacity: 0;
+                    transition: all 1s ease 0s;
+                    &.appearance {
+                        opacity: 1;
+                    }  
                 }
                 .invitation__search {                    
                     padding-top: 67px;
@@ -1992,6 +2015,15 @@ $width: 80%;
                         justify-content: space-between;
                         gap: 35px;
                         grid-template-columns: repeat(2, 1fr);
+                        &:nth-child(1) {
+                            order: 2;
+                        }
+                        &:nth-child(2) {
+                            order: 1;
+                        }
+                        &:nth-child(3) {
+                            order: 3;
+                        }
                         br.mob {
                             display: flex;
                         }
@@ -2030,6 +2062,7 @@ $width: 80%;
                                 min-width: 0;
                                 max-width: 150px;
                             }
+                           
                         }
                         .openspace__cursor {
                             display: none;

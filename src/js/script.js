@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const moves = document.querySelectorAll("#move");
 
-        const texts = document.querySelectorAll("#text");
-
         const hosting = document.querySelectorAll("#layer");
         
         document.querySelectorAll('.openspace__categories-item').forEach(item => {
@@ -135,28 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        if (texts.length > 0) {
-            window.addEventListener("scroll", textAppearance);
-            function textAppearance() {
-                for (let i = 0; i < texts.length; i++) {
-                    const textAnim = texts[i];
-                    const textHeight = textAnim.offsetHeight;
-                    const textAnimOffset = offset(textAnim).top;
-                    const textStart = 0.8;
-        
-                    let textStartPoint = window.innerHeight - textHeight / textStart;
-        
-                    if (textHeight > window.innerHeight) {
-                        textStartPoint = window.innerHeight - window.innerHeight / textStart;
-                    }
-        
-                    if ((pageYOffset > textAnimOffset - textStartPoint) && pageYOffset < (textAnimOffset + textHeight)) {               
-                        textAnim.classList.add("appearance");
-                    }
-                };
-            }
-        }
-
         if (hosting.length > 0) {           
             window.addEventListener("scroll", layerAppearance);
             function layerAppearance() {
@@ -179,15 +155,40 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        function offset(el) {
-            const rect = el.getBoundingClientRect(), 
-                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-        }
-
     } else console.error(`rules doesn't working device width ${innerWidth}.
         you need more than 999`);
+    
+    const texts = document.querySelectorAll("#text");
+    
+
+    if (texts.length > 0) {
+        window.addEventListener("scroll", textAppearance);
+        function textAppearance() {
+            for (let i = 0; i < texts.length; i++) {
+                const textAnim = texts[i];
+                const textHeight = textAnim.offsetHeight;
+                const textAnimOffset = offset(textAnim).top;
+                const textStart = 0.8;
+    
+                let textStartPoint = window.innerHeight - textHeight / textStart;
+    
+                if (textHeight > window.innerHeight) {
+                    textStartPoint = window.innerHeight - window.innerHeight / textStart;
+                }
+    
+                if ((pageYOffset > textAnimOffset - textStartPoint) && pageYOffset < (textAnimOffset + textHeight)) {               
+                    textAnim.classList.add("appearance");
+                }
+            };
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(), 
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
 })
 
 
